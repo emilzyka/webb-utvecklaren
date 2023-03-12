@@ -1,0 +1,25 @@
+---
+import Layout from './Layout.astro';
+const { frontmatter } = Astro.props;
+const { title, sectiontitles, sections } = frontmatter;
+console.log(frontmatter);
+---
+
+<Layout title='posts'>
+  <header>
+    <div>
+      <h1 class='m-5 text-3xl text-center underline text-white'>{title}</h1>
+    </div>
+    <img />
+  </header>
+  <div class='flex flex-col items-center justify-center'>
+    {
+      sectiontitles.map((item, index) => (
+        <div>
+          <h1>{sectiontitles[index]}</h1>
+          <p>{sections[index]}</p>
+        </div>
+      ))
+    }
+  </div>
+</Layout>
