@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { GiCoffeeBeans } from 'react-icons/gi';
 import { IoLogoDiscord } from 'react-icons/io5';
-import { BsGithub } from 'react-icons/bs';
+import { BsGithub, BsYoutube } from 'react-icons/bs';
 import { ThemeToggle } from '../components/ThemeToggle';
 
 export const Header = () => {
@@ -16,6 +16,7 @@ export const Header = () => {
           <ThemeToggle />
           <p className='text-gray-500'>|</p>
           <IoLogoDiscord className='text-gray-500 w-5 h-5 hover:text-purple-500'></IoLogoDiscord>
+          <BsYoutube className='text-gray-500 w-5 h-5 hover:text-purple-500' />
           <BsGithub className='text-gray-500  w-5 h-5 hover:text-purple-500'></BsGithub>
         </div>
       </div>
