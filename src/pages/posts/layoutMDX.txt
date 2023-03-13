@@ -1,0 +1,37 @@
+// article template
+
+---
+layout: '../../layouts/Post.astro'
+path: ''  
+title: 
+subtitle: 
+date: 
+category: 
+description: 
+author: 
+soruces: []
+tags: []
+sectiontitles: []
+sections: [] 
+---
+
+//Explanation of template
+
+---
+layout: Laytour being used see layout/post.astro
+path: path is name of mdx file 
+title: title of article
+subtitle: subtitle of article
+date: 
+category: Arkitektur | Spårning | Front-end | Back-end | m.m. 
+description:  
+author: 
+soruces: artiklens källor
+tags: artikelns taggar
+sectiontitles: rubriker för sektioner. kommaseparerade
+sections: innehåller för varje sektion. kommaseparerade
+---
+
+
+
+
