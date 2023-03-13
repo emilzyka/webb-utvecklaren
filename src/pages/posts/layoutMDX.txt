@@ -5,8 +5,10 @@ layout: '../../layouts/Post.astro'
 path: ''  
 title: 
 subtitle: 
+synonyms: []
 date: 
 category: 
+img: {}
 description: 
 author: 
 soruces: []
@@ -22,6 +24,7 @@ layout: Laytour being used see layout/post.astro
 path: path is name of mdx file 
 title: title of article
 subtitle: subtitle of article
+synonyms: []
 date: 
 category: Arkitektur | Spårning | Front-end | Back-end | m.m. 
 description:  

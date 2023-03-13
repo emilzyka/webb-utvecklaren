@@ -1,23 +1,25 @@
 ---
 layout: '../../layouts/Post.astro'
-path: './posts/cookies/'
+path: './cookies/'
 title: Vad är en webbkaka?
 subtitle: Hur, när och varför används webbkakor?
+synonyms: ['Webbkaka', 'kakfil', 'kaka', 'cookie']
 date: 2023-03-10
 category: Arkitektur
+img: { src: '/src/img/cookie.jpg', alt: 'A picture of a cookie' }
 description: Beskrivning av en webbkaka. Hur, när och varför det används.
-author: Emile Zyka.
+author: Emil Zyka
 soruces:
-    [
-        https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#creating_cookies,
-        https://learn.microsoft.com/en-us/previous-versions/aspnet/ms178194(v=vs.100),
-        https://www.geeksforgeeks.org/explain-persistent-cookie/,
-    ]
-tags: [Webbkaka, kakfil, kaka, cookie]
+  [
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#creating_cookies,
+    https://learn.microsoft.com/en-us/previous-versions/aspnet/ms178194(v=vs.100),
+    https://www.geeksforgeeks.org/explain-persistent-cookie/,
+  ]
+tags: [Spårning, Test, Kategori]
 sectiontitles: ['Hur funkar det?', 'Varför används det?']
 sections:
-    [
-        'En webbkaka består av en liten datafil som initalt skickas med från en webbserver när en förfrågning skickas från en webbläsare till en webbserver. Konkret innebär det att när en anvädare besöker en webbsida kan hemsidan tillhandahålla informationen som finns i användarens webbkaka. Webbsidan kan också skicka en webbkaka till användaren som innehåller data. Till exempel datum och tid för användarens besök. Om användaren besöker webbsidan igen kan den webbsidan känna igen webbkakan som är kopplad till den specifika webbadressen. Därmed kan webbsidan extrahera och använda webbkakans data för att avgöra när användaren senast besökt webbplatsen. En webbläsare lagrar vanligtvis alla webbkakor för olika webbplatser separat. Webbkakor kan också sparas lokalt i hårddisken på din enhet (t.ex. dator mobil eller surfplatta). Det finns flera olika typer av webbkakor med olika användningsområden och livscyklar. En sessionskaka existerar temporärt tills dess att användaren stänger ner sin webbläsare. Det vill säga tills dess att sessionen avbryts. Emellertid så kan webbläsare oftast återuppta avbrytna sessionskakor vilket i praktiken innebär att de kan finnas kvar även efter avslutat session. En beständig webbkaka lagras lokalt på din dator även när du stängt ner din webbläsare. En beständig webbkaka består vanligtvis av minst fyra egenskaper. Ett namn associerad data, ett utgångsdatum och samt en filväg som motsvarar där kakan lagras.',
-        'Båda typerna av webbkakor används för att spara undan information om besökaren. Det kan vara användarens inloggningsuppgifter, inställningar, och preferenser. I sin tur kan denna information användas för att förbättra användarupplevelsen genom bespara användaren tiden att behöva fylla i alla sin uppgifter igen. Webbkakor kan även används i marknadsföringssyfte. Här kan data som till exempel hur länge en användare befunnit sig på en hemsida, vilken hemsida den besökt, språk, vilken enhet användaren använd samt vilka aktioner den utfört på hemsidan användas för att skräddarsy marknadskampanjer.',
-    ]
+  [
+    'En webbkaka består av en liten datafil som initalt skickas med från en webbserver när en förfrågning skickas från en webbläsare till en webbserver. Konkret innebär det att när en anvädare besöker en webbsida kan hemsidan tillhandahålla informationen som finns i användarens webbkaka. Webbsidan kan också skicka en webbkaka till användaren som innehåller data. Till exempel datum och tid för användarens besök. Om användaren besöker webbsidan igen kan den webbsidan känna igen webbkakan som är kopplad till den specifika webbadressen. Därmed kan webbsidan extrahera och använda webbkakans data för att avgöra när användaren senast besökt webbplatsen. En webbläsare lagrar vanligtvis alla webbkakor för olika webbplatser separat. Webbkakor kan också sparas lokalt i hårddisken på din enhet (t.ex. dator mobil eller surfplatta). Det finns flera olika typer av webbkakor med olika användningsområden och livscyklar. En sessionskaka existerar temporärt tills dess att användaren stänger ner sin webbläsare. Det vill säga tills dess att sessionen avbryts. Emellertid så kan webbläsare oftast återuppta avbrytna sessionskakor vilket i praktiken innebär att de kan finnas kvar även efter avslutat session. En beständig webbkaka lagras lokalt på din dator även när du stängt ner din webbläsare. En beständig webbkaka består vanligtvis av minst fyra egenskaper. Ett namn associerad data, ett utgångsdatum och samt en filväg som motsvarar där kakan lagras.',
+    'Båda typerna av webbkakor används för att spara undan information om besökaren. Det kan vara användarens inloggningsuppgifter, inställningar, och preferenser. I sin tur kan denna information användas för att förbättra användarupplevelsen genom bespara användaren tiden att behöva fylla i alla sin uppgifter igen. Webbkakor kan även används i marknadsföringssyfte. Här kan data som till exempel hur länge en användare befunnit sig på en hemsida, vilken hemsida den besökt, språk, vilken enhet användaren använd samt vilka aktioner den utfört på hemsidan användas för att skräddarsy marknadskampanjer.',
+  ]
 ---

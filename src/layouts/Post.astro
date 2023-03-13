@@ -1,26 +1,64 @@
 ---
+import { Image } from '@astrojs/image/components';
+//layout
 import Layout from './Layout.astro';
+
+//utils
+import { dateFormat } from '../utils/functions';
+
 const { frontmatter } = Astro.props;
-const { title, sectiontitles, sections, date, author, tags, sources } = frontmatter;
+const { title, sectiontitles, sections, date, author, tags, sources, img } =
+  frontmatter;
 ---
 
 <Layout title='posts'>
-    <header>
-        <div>
-            <h1 class='m-5 text-3xl text-center font-extrabold text-black dark:text-white'>{title}</h1>
-        </div>
-        <img />
-    </header>
-    <div class='flex flex-col items-center justify-center'>
-        {
-            sectiontitles.map((item, index) => (
-                <div class='flex flex-col w-2/5 text-justify'>
-                    <h1 class='text-left font-bold text-black dark:text-white my-2'>{sectiontitles[index]}</h1>
-                    <p class='text-gray-500'>{sections[index]}</p>
-                </div>
-            ))
-        }
-        <p class='text-gray-400 mt-4 font-light'>Written by: {author}</p>
-        <p class='text-gray-400 mb-4 font-light'>{date}</p>
+  <header>
+    <div class="flex flex-col items-center justify-center">
+      <h1
+        class='m-5 text-3xl text-center font-extrabold text-black dark:text-white'>
+        {title}
+      </h1>
+      {(Object.keys(img).length > 0) ? <Image
+        src={img.src}
+        alt={img.alt}
+        width={900}
+        height={500}
+        format={'avif'}
+        fit={'cover'}
+        quality={75}
+        aspectRatio={'4:3'}
+        class="rounded-md"
+      /> : <></>}
     </div>
+
+  </header>
+  <div class='flex flex-col items-center justify-center mt-8'>
+    {
+      sectiontitles.map((item, index) => (
+        <div class='flex flex-col w-2/5 sm:w-4/5 text-justify'>
+          <h1 class='text-left font-bold text-black dark:text-white my-4'>
+            {sectiontitles[index]}
+          </h1>
+          <p class='text-gray-500'>{sections[index]}</p>
+        </div>
+      ))
+    }
+    <div class='flex flex-col items-center justify-center mt-8'>
+        <p class='text-gray-400 font-light'>Skriven av {author}</p>
+        <p class='text-gray-500 font-extralight'>{dateFormat(date)}</p>
+    </div>
+    <div class='flex flex-row justify-center items-center my-10'>
+      <h3 class='text-gray-400 font-bold'>Taggar:&nbsp;</h3>
+      {
+        tags.map((tag) => (
+          <button
+            class='border ml-4 p-2 rounded-md border-gray-400 text-sm text-gray-400
+          hover:scale-105'>
+            {tag}
+          </button>
+        ))
+      }
+    </div>
+    
+  </div>
 </Layout>
