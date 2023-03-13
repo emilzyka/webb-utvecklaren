@@ -1,5 +1,5 @@
 ---
-import { PostCard } from '../../components/PostCard';
+import PostCard from '../../components/PostCard.astro';
 import Layout from '../../layouts/Layout.astro';
 
 //utils import
@@ -10,16 +10,22 @@ const allPosts = await Astro.glob('./*.mdx');
 
 //filter
 const formatedPosts = filterArticlePost(allPosts, {
-    sortByDate: true,
-    limit: 2,
+  sortByDate: true,
+  limit: 2,
 });
 ---
 
 <Layout title='All posts'>
-    <section class='' aria-label='All posts'>
-        <h1 class='text-center text-gray-500 font-semibold text-5xl mt-10'>Artiklar</h1>
-        <div class='flex flex-col items-center justify-center m-5'>
-            {formatedPosts.map((post) => <PostCard postData={post} />)}
-        </div>
-    </section>
+  <section class='' aria-label='All posts'>
+    <h1 class='text-center text-gray-500 font-semibold text-5xl mt-10'>
+      Artiklar
+    </h1>
+    <div class='flex flex-col items-center justify-center m-5'>
+      {
+        formatedPosts.map((post) => (
+          <PostCard frontmatter={post.frontmatter} url={post.url} />
+        ))
+      }
+    </div>
+  </section>
 </Layout>
