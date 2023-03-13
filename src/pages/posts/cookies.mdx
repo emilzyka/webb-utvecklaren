@@ -1,8 +1,9 @@
 ---
 layout: '../../layouts/Post.astro'
 title: Vad är en webbkaka?
-subtitle: Hur fungerar webbkakor och varför används det?
-hashtags: ['Webbkaka', 'kakfil', 'kaka', 'cookie']
+subtitle: Hur fungerar webbkakor och hur används de?
+hashtags: ['Cookie', 'Analytics', 'Marknadsföring', 'Datalagring']
+difficulty: introduktion
 date: 2023-03-10
 category: Arkitektur
 img: { src: '/src/img/cookie.jpg', alt: 'A picture of a cookie' }
@@ -11,15 +12,21 @@ varför används dem och vilka regler finns det?'
 author: Emil Zyka
 soruces:
   [
-    https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#creating_cookies,
-    https://learn.microsoft.com/en-us/previous-versions/aspnet/ms178194(v=vs.100),
-    https://www.geeksforgeeks.org/explain-persistent-cookie/,
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#creating_cookies",
+    "https://learn.microsoft.com/en-us/previous-versions/aspnet/ms178194(v=vs.100)",
+    "https://cookieinformation.com/sv/vad-ar-en-cookie/",
   ]
-tags: [Spårning, Test, Kategori]
-sectiontitles: ['Hur funkar det?', 'Varför används det?']
+tags: [Spårning, Kategori]
+sectiontitles: ['Vad är en webbkaka?', 'Varaktiga och sessions-kakor', "Vilken information spåras av kakor?", "Första och tredjepartskakor", "Cookies och säkerhet"]
 sections:
   [
-    'En webbkaka består av en liten datafil som initalt skickas med från en webbserver när en förfrågning skickas från en webbläsare till en webbserver. Konkret innebär det att när en anvädare besöker en webbsida kan hemsidan tillhandahålla informationen som finns i användarens webbkaka. Webbsidan kan också skicka en webbkaka till användaren som innehåller data. Till exempel datum och tid för användarens besök. Om användaren besöker webbsidan igen kan den webbsidan känna igen webbkakan som är kopplad till den specifika webbadressen. Därmed kan webbsidan extrahera och använda webbkakans data för att avgöra när användaren senast besökt webbplatsen. En webbläsare lagrar vanligtvis alla webbkakor för olika webbplatser separat. Webbkakor kan också sparas lokalt i hårddisken på din enhet (t.ex. dator mobil eller surfplatta). Det finns flera olika typer av webbkakor med olika användningsområden och livscyklar. En sessionskaka existerar temporärt tills dess att användaren stänger ner sin webbläsare. Det vill säga tills dess att sessionen avbryts. Emellertid så kan webbläsare oftast återuppta avbrytna sessionskakor vilket i praktiken innebär att de kan finnas kvar även efter avslutat session. En beständig webbkaka lagras lokalt på din dator även när du stängt ner din webbläsare. En beständig webbkaka består vanligtvis av minst fyra egenskaper. Ett namn associerad data, ett utgångsdatum och samt en filväg som motsvarar där kakan lagras.',
-    'Båda typerna av webbkakor används för att spara undan information om besökaren. Det kan vara användarens inloggningsuppgifter, inställningar, och preferenser. I sin tur kan denna information användas för att förbättra användarupplevelsen genom bespara användaren tiden att behöva fylla i alla sin uppgifter igen. Webbkakor kan även används i marknadsföringssyfte. Här kan data som till exempel hur länge en användare befunnit sig på en hemsida, vilken hemsida den besökt, språk, vilken enhet användaren använd samt vilka aktioner den utfört på hemsidan användas för att skräddarsy marknadskampanjer.',
+    'Cookies, eller kakor, är små textfiler som lagras i en webbläsare när någon besöker en webbplats. En webbplats kan både skicka och hämta kakor som tillhör besökaren.
+    Kakorna består av data som beskriver besökaren. Exakt vilken data som lagras i kakan varierar men det kan handla om platsinformation, datum och tid för användarens besök,
+    språkinställningar, utförda aktiviteter på webbsidan, användarvalda inställningar, användaruppgifter samt personlig identifierbar information. Kakor lagras vanligtvis i din
+    webbläsare men kan också sparas lokalt i hårddisken på din enhet. Det finns huvudsakligen två typer av kakor med olika användningsområden och livscyklar. Dessa är sessionskakor och varaktiga kakor.',
+    'En varaktig kaka lagras vanligtvis i en mapp, i hårddisken, på besökarens lokala enhet. Dessa kakor finns kvar i enheten ända tills dess att de når sitt utgångsdatum. När en besökare återkommer till en webbplats kan webbläsaren läsa in information som finns lagrad i kakan. En sessions-kaka lagras tillfälligt i webbläsaren och försvinner när besökaren avslutar sitt besök på webbplatsen. Den här typen av kakor används för att hålla reda på webbspecefika inställningar så som språk, ifyllda uppgifter i ett formulär eller för att förhindra att en webbplats efterfråga samma information flera gånger.',
+    'Den information som sparas i kakorna är vanligtvis krypterad vilket gör att det oftast är svårt att avgöra exakt vad som lagras. Oftast lagras dock både information om användarens beteende på webbplatsen samt information för att identifiera användaren. Information om användarens beteende kan vara till exempel: tid och datum för besök, inköpsinformation, aktivitet på hemsidan, integritetsinställningar samt sidvisningar. Information för att identifiera användaren kan vara olika typer av id:n, ip-adresser, inloggninsuppgifter, webbläsare och operativsystem.',
+    'Om en kaka används av och för den besökta webbplatsen benämns det som en förstapartskaka. Om kakan används av tjänster som sidan tillhandahåller eller implementerar benämns det som en tredjepartskaka. Förstapartskakor används för att förbättra användarupplevlsen på den besökta hemplatsen genom att hålla koll på en användares inställningar, aktivitet och inloggning. Tredjepartskakor används av externa företag genom den besökta webbplatsen. Dessa kan skapa profiler och målgrupper baserat på dina beteende och personuppgifter för att skräddarsy marknadserbjudanden, analyser och reklam.',
+    'Som bekant lagrar cookies en del "känslig information" så som geografisk plats, ip-adress, användaruppgifter och beteendemönster. Anvädningen av cookies är i allmänt hårt reglerade och bör inte utgöra en grund för orolighet. Kakor används i första hand för att förbättra användarupplevelsen och i marknadsföringssyfte. Som besökare har du möjlighet och rätt till att neka kakor. En webbplats ska också ge en beskrivning av alla dess kakor, deras syfte och livslängd. Därtill ska även besökaren kunna se en fullständig lista av tredjepartcookies. Kraven för inhämtning och lagring av personuppgifter i cookies lyder också under GDPR. Du bör dock alltid vara försiktig med att uppge personlig information på nätet. Om du vill förbli så annonyn som möjligt kan du justera inställningarna i din webbläsare samt installera add-ons som inaktiverar vissa typer av kakor.',
   ]
 ---

@@ -15,7 +15,7 @@ const { title, sectiontitles, sections, date, author, tags, sources, img } =
   <header>
     <div class="flex flex-col items-center justify-center">
       <h1
-        class='m-5 text-3xl text-center font-extrabold text-black dark:text-white'>
+        class='m-5 text-4xl text-center font-extrabold text-black dark:text-white'>
         {title}
       </h1>
       {(Object.keys(img).length > 0) ? <Image
@@ -36,10 +36,10 @@ const { title, sectiontitles, sections, date, author, tags, sources, img } =
     {
       sectiontitles.map((item, index) => (
         <div class='flex flex-col w-2/5 sm:w-4/5 text-justify'>
-          <h1 class='text-left font-bold text-black dark:text-white my-4'>
+          <h1 class='text-left text-xl font-bold text-black dark:text-white my-4'>
             {sectiontitles[index]}
           </h1>
-          <p class='text-gray-500'>{sections[index]}</p>
+          <p class='text-lg sm:text-base text-black dark:text-gray-400'>{sections[index]}</p>
         </div>
       ))
     }
