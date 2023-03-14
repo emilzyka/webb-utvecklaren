@@ -13,7 +13,7 @@ export const Header = () => {
           <a href='/' className='text-gray-500 font-semibold'>
             Hem
           </a>
-          <a href='/posts/' className='text-gray-500 font-semibold'>
+          <a href='/articles/' className='text-gray-500 font-semibold'>
             Artiklar
           </a>
         </div>

@@ -5,9 +5,10 @@ import Layout from './Layout.astro';
 
 //utils
 import { dateFormat } from '../utils/functions';
+import { slugify } from '../utils/functions';
 
 const { frontmatter } = Astro.props;
-const { title, sectiontitles, sections, date, author, tags, sources, img } =
+const { title, sectiontitles, sections, date, author, tags, category, img } =
   frontmatter;
 ---
 
@@ -51,11 +52,12 @@ const { title, sectiontitles, sections, date, author, tags, sources, img } =
       <h3 class='text-gray-400 font-bold'>Taggar:&nbsp;</h3>
       {
         tags.map((tag) => (
-          <button
+          <a
+            href={`/category/${slugify(category)}/`}
             class='border ml-4 p-2 rounded-md border-gray-400 text-sm text-gray-400
           hover:scale-105'>
             {tag}
-          </button>
+          </a>
         ))
       }
     </div>

@@ -1,7 +1,7 @@
 ---
 import { Image } from '@astrojs/image/components';
-const { frontmatter, url } = Astro.props;
-const { subtitle, img, description, hashtags } = frontmatter;
+const { data, url } = Astro.props;
+const { subtitle, img, description, hashtags } = data;
 ---
 
 <article class='max-w-md rounded overflow-hidden shadow-lg dark:shadow-slate-900 mt-8'>
@@ -17,7 +17,7 @@ const { subtitle, img, description, hashtags } = frontmatter;
         class="w-full"
       /> : <></>}
       <div class="px-6 py-4">
-        <a class="font-bold text-xl mb-2 text-black dark:text-white" href={url}>{subtitle}</a>
+        <a class="font-bold text-xl mb-2 text-black dark:text-white" href={`/articles/${url}`}>{subtitle}</a>
         <p class="text-gray-400 text-base mt-2 text-left">{description}</p>
       </div>
       <div class="px-6 pt-4 pb-2">
