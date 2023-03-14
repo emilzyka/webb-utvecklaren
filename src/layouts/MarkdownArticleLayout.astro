@@ -34,6 +34,7 @@ const { title, sectiontitles, sections, date, author, tags, category, img } =
 
   </header>
   <div class='flex flex-col items-center justify-center mt-8'>
+    <slot />
     {
       sectiontitles.map((item, index) => (
         <div class='flex flex-col w-2/5 sm:w-4/5 text-justify'>
@@ -61,6 +62,5 @@ const { title, sectiontitles, sections, date, author, tags, category, img } =
         ))
       }
     </div>
-    
   </div>
 </Layout>
