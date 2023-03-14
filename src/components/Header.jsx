@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { GiCoffeeBeans } from 'react-icons/gi';
 import { IoLogoDiscord } from 'react-icons/io5';
 import { BsGithub, BsYoutube } from 'react-icons/bs';
@@ -10,10 +9,10 @@ export const Header = () => {
       <div className='grid grid-cols-5 flex-row items-center mt-3 ml-3 opacity-80'>
         <div className='flex flex-col-2 items-center gap-5'>
           <GiCoffeeBeans className='w-10 h-10 text-gray-500 hover:animate-spin ' />
-          <a href='/' className='text-gray-500 font-semibold'>
+          <a href='/' className='text-gold font-semibold'>
             Hem
           </a>
-          <a href='/articles/' className='text-gray-500 font-semibold'>
+          <a href='/articles/' className='text-gold font-semibold'>
             Artiklar
           </a>
         </div>

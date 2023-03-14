@@ -3,7 +3,12 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bone: '#f3efd3',
+        gold: '#ffc001',
+      },
+    },
     screens: {
       '2xl': { max: '1535px' },
       // => @media (max-width: 1535px) { ... }
