@@ -6,33 +6,28 @@ import { getCollection, CollectionEntry } from 'astro:content';
 
 //utils import
 import { filterArticlePost } from '../../utils/functions';
+import { Articlefilter } from '../../components/Articlefilter.jsx';
 
 export async function getStaticPaths({ paginate }) {
-  const allArticles = await getCollection('articles');
-  const formatedPosts: CollectionEntry<'articles'>[] = filterArticlePost(
-    allArticles,
-    {
-      sortByDate: true,
-    }
-  );
+    const allArticles = await getCollection('articles');
+    const formatedPosts: CollectionEntry<'articles'>[] = filterArticlePost(allArticles, {
+        sortByDate: true,
+    });
 
-  return paginate(formatedPosts, {
-    pageSize: 1,
-  });
+    return paginate(formatedPosts, {
+        pageSize: 2,
+    });
 }
 
 const { page } = Astro.props;
 ---
 
 <Layout title='All posts'>
-  <section class='' aria-label='All posts'>
-    <h1 class='text-center text-gray-500 font-semibold text-5xl mt-10'>
-      Artiklar
-    </h1>
-
-    <div class='flex flex-col items-center justify-center m-5'>
-      {page.data.map((post) => <PostCard data={post.data} url={post.slug} />)}
-    </div>
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-  </section>
+    <section class='' aria-label='All posts'>
+        <Articlefilter />
+        <div class='flex sm:flex-col gap-20 items-center justify-center m-5'>
+            {page.data.map((post) => <PostCard data={post.data} url={post.slug} />)}
+        </div>
+        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    </section>
 </Layout>

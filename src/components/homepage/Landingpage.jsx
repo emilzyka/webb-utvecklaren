@@ -72,8 +72,8 @@ export const Landingpage = () => {
 
     return (
         <>
-            <div className='flex flex-col items-center mt-20'>
-                <h1 className='text-center text-bone text-4xl'>Grunläggande</h1>
+            <div className='flex flex-col items-center mt-32'>
+                <h1 className='text-center text-black dark:text-bone text-4xl'>Grunläggande</h1>
                 <h1 className='text-center text-gold text-4xl ml-48 mb-12 '>Verktyg.</h1>
             </div>
             <div className='flex flex-row lg:flex-col items-center justify-center gap-2'>
@@ -89,17 +89,19 @@ export const Landingpage = () => {
                     </div>
                 ))}
             </div>
-            <div className='flex flex-col items-center justify-center my-20'>
-                <h1 className='text-4xl  text-bone mt-12'>De viktigaste byggstenarna i</h1>
-                <span className='text-gold text-4xl underline underline-offset-8 decoration-1'>&nbsp;webbutveckling.</span>
+            <div className='flex flex-col items-center justify-center mt-28 mb-16'>
+                <h1 className='text-4xl text-black dark:text-bone mt-12'>De viktigaste byggstenarna i</h1>
+                <span className='text-gold text-4xl'>&nbsp;webbutveckling.</span>
             </div>
             <div className='flex flex-col items-center justify-center'>
                 {info.map(({ id, title, icon, description }) =>
                     id % 2 === 0 ? (
                         <div key={id} className='flex flex-row items-center gap-24 sm:gap-1.5 mb-6'>
                             <div className='flex flex-col items-left m-5'>
-                                <h2 className='text-bone text-3xl mb-2'>{title}</h2>
-                                <p className='font-light text-gray-300 text-lg sm:text-base max-w-sm text-justify'>{description}</p>
+                                <h2 className='text-black dark:text-bone text-3xl mb-2'>{title}</h2>
+                                <p className='font-light text-gray-600 dark:text-gray-300 text-lg sm:text-base max-w-sm text-justify'>
+                                    {description}
+                                </p>
                             </div>
                             {icon}
                         </div>
@@ -107,19 +109,23 @@ export const Landingpage = () => {
                         <div key={id} className='flex flex-row items-center gap-24 sm:gap-6 mb-6'>
                             {icon}
                             <div className='flex flex-col items-right m-5'>
-                                <h2 className='text-bone text-3xl mb-2'>{title}</h2>
-                                <p className='font-light text-gray-300 text-lg sm:text-base  max-w-sm text-justify'>{description}</p>
+                                <h2 className='text-black dark:text-bone text-3xl mb-2'>{title}</h2>
+                                <p className='font-light text-gray-600 dark:text-gray-300 text-lg sm:text-base  max-w-sm text-justify'>
+                                    {description}
+                                </p>
                             </div>
                         </div>
                     )
                 )}
             </div>
-            <h2 className='text-center text-4xl text-bone mt-10'>Front- och backend.</h2>
+            <h2 className='text-center text-4xl text-black dark:text-bone mt-28'>Front- och backend.</h2>
             <div className='flex flex-col items-center justify-center gap-4'>
                 {tech.map(({ id, title, description }) => (
                     <div className='mt-6 ' key={id}>
                         <h3 className='text-gold text-2xl p-2'>{title}</h3>
-                        <p className='text-gray-300 text-lg p-2 max-w-lg sm:max-w-md text-justify'>{description}</p>
+                        <p className='text-gray-600 dark:text-gray-300 font-light text-lg p-2 max-w-lg sm:max-w-md text-justify'>
+                            {description}
+                        </p>
                     </div>
                 ))}
             </div>

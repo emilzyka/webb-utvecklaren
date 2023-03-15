@@ -1,28 +1,39 @@
 ---
 import { Image } from '@astrojs/image/components';
 const { data, url } = Astro.props;
-const { subtitle, img, description, hashtags } = data;
+const { subtitle, img, description, hashtags, category } = data;
 ---
 
-<article class='max-w-md rounded overflow-hidden shadow-lg dark:shadow-slate-900 mt-8'>
+<article class='max-w-xs  mt-8'>
     {(Object.keys(img).length > 0) ? <Image
         src={img.src}
         alt={img.alt}
-        width={900}
-        height={500}
+        width={400}
+        height={300}
         format={'avif'}
         fit={'cover'}
         quality={75}
         aspectRatio={'4:3'}
-        class="w-full"
+        class="w-full rounded-xl"
       /> : <></>}
-      <div class="px-6 py-4">
-        <a class="font-bold text-xl mb-2 text-black dark:text-white" href={`/articles/${url}`}>{subtitle}</a>
-        <p class="text-gray-400 text-base mt-2 text-left">{description}</p>
+      <div class="flex mt-3 px-3 py-2">
+         <p class="text-gray-600 font-semibold ml-5">{category}</p>
+         <p class="ml-40">🦉</p>
       </div>
-      <div class="px-6 pt-4 pb-2">
+      <div class="px-6 py-4">
+        <p class="font-semibold text-xl mb-2 text-black dark:text-bone">{subtitle}</p>
+        <p class="text-gray-600 dark:text-gray-400 text-base mt-2 text-left">{description}</p>
+      </div>
+      <div class="px-6 py-4">
+        <button class="text-bone dark:text-gold bg-bglight border border-white dark:border-gold 
+        font-light p-2 rounded-lg ml-1 hover:pointer-cursor hover:scale-105">
+          <a class="p-2" href={`/articles/${url}`}>Läs artikel</a></button>
+      </div>
+      <div class="px-3 pt-2 ml-4">
         {hashtags.map((tag) => 
-        <span class="inline-block bg-purple-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</span>
+        <span class="inline-block bg-bglight rounded-full px-3 py-1 
+        text-sm font-semibold text-gray-400 mr-2 mb-2">#{tag}</span>
         )}
       </div>
 </article>
+
