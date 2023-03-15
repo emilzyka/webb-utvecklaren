@@ -1,7 +1,4 @@
 ---
-import Pagination from '../../components/Pagination.astro';
-import PostCard from '../../components/PostCard.astro';
-import Layout from '../../layouts/Layout.astro';
 import MarkdownArticleLayout from '../../layouts/MarkdownArticleLayout.astro';
 import { getCollection, CollectionEntry } from 'astro:content';
 
@@ -9,13 +6,13 @@ import { getCollection, CollectionEntry } from 'astro:content';
 import { filterArticlePost } from '../../utils/functions';
 
 export async function getStaticPaths() {
-  const allArticles = await getCollection('articles');
-  return allArticles.map((entry) => ({
-    params: { slug: entry.slug },
-    props: {
-      entry,
-    },
-  }));
+    const allArticles = await getCollection('articles');
+    return allArticles.map((entry) => ({
+        params: { slug: entry.slug },
+        props: {
+            entry,
+        },
+    }));
 }
 
 const { entry } = Astro.props;
@@ -23,5 +20,5 @@ const { Content } = await entry.render();
 ---
 
 <MarkdownArticleLayout frontmatter={entry.data}>
-  <Content />
+    <Content />
 </MarkdownArticleLayout>

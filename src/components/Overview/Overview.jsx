@@ -34,9 +34,12 @@ export const Overview = () => {
                 <h1 className='text-center text-bone text-4xl'>Grunläggande</h1>
                 <h1 className='text-center text-gold text-4xl ml-48 mb-12 '>Verktyg.</h1>
             </div>
-            <div className='flex flex-row lg:flex-col items-center justify-center'>
+            <div className='flex flex-row lg:flex-col items-center justify-center gap-2'>
                 {basicTools.map(({ id, name, title, examaples, description }) => (
-                    <div className='max-w-md h-72 rounded overflow-hidden border-solid border border-gray-500' key={id}>
+                    <div
+                        className='max-w-md h-72 rounded-lg overflow-hidden border-solid border
+                     border-gray-500 bg-bglight bg-opacity-60'
+                        key={id}>
                         <h1 className='px-6 py-4 text-xl text-bone text-center'>{name}</h1>
                         <h2 className='text-lg text-yellow-500 text-center underline underline-offset-8'>{title}</h2>
                         <p className='px-6 py-4 text-md text-gray-300 text-center'>{description}</p>
