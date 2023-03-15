@@ -1,37 +1,39 @@
 ---
+import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import Head from './Head.astro';
 
 export interface Props {
-  title: string;
+    title: string;
 }
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang='en'>
-  <Head title={title} />
-  <body>
-    <main>
-      <Header client:load />
-      <slot />
-    </main>
-    <style is:global>
-      :root {
-      }
-      [data-theme='light'] {
-        background-color: white;
-      }
-      [data-theme='dark'] {
-        background-color: rgba(15, 8, 37, 1);
-      }
-      html {
-        font-family: system-ui, sans-serif;
-      }
-      code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-    </style>
-  </body>
+    <Head title={title} />
+    <body>
+        <main>
+            <Header client:load />
+            <slot />
+            <Footer client:load />
+            <style is:global>
+                :root {
+                }
+                [data-theme='light'] {
+                    background-color: white;
+                }
+                [data-theme='dark'] {
+                    background-color: rgba(15, 8, 37, 1);
+                }
+                html {
+                    font-family: system-ui, sans-serif;
+                }
+                code {
+                    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+                        monospace;
+                }
+            </style>
+        </main>
+    </body>
 </html>
