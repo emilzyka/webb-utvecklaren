@@ -23,9 +23,9 @@ const { page } = Astro.props;
 ---
 
 <Layout title='All posts'>
-    <section class='' aria-label='All posts'>
+    <section aria-label='All posts'>
         <Articlefilter />
-        <div class='flex sm:flex-col gap-20 items-center justify-center m-5'>
+        <div class='flex sm:flex-col gap-20 items-center justify-center mt-24'>
             {page.data.map((post) => <PostCard data={post.data} url={post.slug} />)}
         </div>
         <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />

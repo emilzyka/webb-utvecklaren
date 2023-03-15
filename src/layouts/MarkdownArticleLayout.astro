@@ -14,11 +14,7 @@ const { title, sectiontitles, sections, date, author, tags, category, img } =
 
 <Layout title='posts'>
   <header>
-    <div class="flex flex-col items-center justify-center">
-      <h1
-        class='m-5 text-4xl text-center font-extrabold text-black dark:text-white'>
-        {title}
-      </h1>
+    <div class="flex flex-col items-center justify-center mt-10">
       {(Object.keys(img).length > 0) ? <Image
         src={img.src}
         alt={img.alt}
@@ -28,10 +24,13 @@ const { title, sectiontitles, sections, date, author, tags, category, img } =
         fit={'cover'}
         quality={75}
         aspectRatio={'4:3'}
-        class="rounded-md"
+        class="rounded-md w-3/4 max-w-4xl"
       /> : <></>}
+      <h1
+      class='mt-12 text-4xl  font-semibold text-black dark:text-white'>
+      {title}
+    </h1>
     </div>
-
   </header>
   <div class='flex flex-col items-center justify-center mt-8'>
     <slot />
