@@ -24,23 +24,6 @@ export const Road = () => {
         },
     ];
 
-    /*
-    CSS Pre-Processor: 
-    SASS:  https://sass-lang.com/
-    Variabler, nesting, funktioner, arv.
-
-    Post css: 
-    https://postcss.org/
-    implemented through js plugins.
-
-    css fundamentals,
-    css specificity
-    flexbox, grid
-    responsiv design,
-
-
-*/
-
     return (
         <>
             <div className='flex max-w-xs flex-col items-start justify-start mt-12 ml-12'>
