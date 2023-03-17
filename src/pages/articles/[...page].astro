@@ -6,7 +6,7 @@ import { getCollection, CollectionEntry } from 'astro:content';
 
 //utils import
 import { filterArticlePost } from '../../utils/functions';
-import { Articlefilter } from '../../components/Articlefilter.jsx';
+import { ArticleSeperator } from '../../components/ArticleSeperator.jsx';
 
 export async function getStaticPaths({ paginate }) {
     const allArticles = await getCollection('articles');
@@ -24,7 +24,9 @@ const { page } = Astro.props;
 
 <Layout title='All posts'>
     <section aria-label='All posts'>
-        <Articlefilter />
+        <div class='mt-20 flex items-center justify-center'>
+            <ArticleSeperator />
+        </div>
         <div class='flex sm:flex-col gap-20 items-center justify-center mt-24'>
             {page.data.map((post) => <PostCard data={post.data} url={post.slug} />)}
         </div>
