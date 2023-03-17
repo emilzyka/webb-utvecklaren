@@ -1,7 +1,3 @@
-import { IoLogoDiscord } from 'react-icons/io5';
-import { BsGithub, BsYoutube } from 'react-icons/bs';
-import { SiReactos } from 'react-icons/si';
-import { AiOutlineSearch } from 'react-icons/ai';
 import { ThemeToggle } from '../components/ThemeToggle';
 
 export const Header = () => {
@@ -9,7 +5,7 @@ export const Header = () => {
         <header>
             <div className='grid grid-cols-6 flex-row items-center mt-3 ml-3 opacity-80'>
                 <div className='flex col-span-2 items-center justify-end gap-3 ml-2 sm:justify-start'>
-                    <SiReactos className='text-highlight w-5 h-5' />
+                    <p className='text-highlight w-5 h-5'>🍂</p>
                     <a href='/' className='text-primary font-semibold hover:text-gray-400'>
                         Utvecklaren.
                     </a>
@@ -24,9 +20,9 @@ export const Header = () => {
                     <p className='text-gray-500'>|</p>
                     <ThemeToggle />
                     <p className='text-gray-500'>|</p>
-                    <IoLogoDiscord className='text-gray-500 w-6 h-6 hover:text-purple-500'></IoLogoDiscord>
-                    <BsYoutube className='text-gray-500 w-6 h-6 hover:text-purple-500' />
-                    <BsGithub className='text-gray-500  w-6 h-6 hover:text-purple-500'></BsGithub>
+                    <p className='text-gray-500 w-6 h-6 hover:text-purple-500'>👑</p>
+                    <p className='text-gray-500 w-6 h-6 hover:text-purple-500'>👑</p>
+                    <p className='text-gray-500  w-6 h-6 hover:text-purple-500'>👑</p>
                 </div>
             </div>
         </header>
