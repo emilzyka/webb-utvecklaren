@@ -8,14 +8,10 @@ export const Header = () => {
         <header>
             <div className='grid grid-cols-5 flex-row items-center mt-3 ml-3 opacity-80'>
                 <div className='flex flex-col-2 items-center gap-5'>
-                    <GiCoffeeBeans className='w-10 h-10 text-gray-500 hover:animate-spin ' />
-                    <a href='/' className='text-purple-800 dark:text-purple-100 font-semibold hover:text-purple-500'>
+                    <a href='/' className='text-gray-500  font-semibold hover:text-purple-500'>
                         Hem
                     </a>
-                    <a href='/roadmap/' className='text-purple-800 dark:text-purple-100 font-semibold hover:text-purple-500'>
-                        Roadmap
-                    </a>
-                    <a href='/articles/' className='text-purple-800 dark:text-purple-100 font-semibold hover:text-purple-500'>
+                    <a href='/articles/' className='text-gray-500 font-semibold hover:text-purple-500'>
                         Artiklar
                     </a>
                 </div>

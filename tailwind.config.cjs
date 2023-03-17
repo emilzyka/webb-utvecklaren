@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { createThemes } = require('tw-colors');
+
 module.exports = {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
     darkMode: 'class',
@@ -30,5 +32,20 @@ module.exports = {
             // => @media (min-width: 639px) { ... }
         },
     },
-    plugins: [],
+    plugins: [
+        createThemes({
+            light: {
+                primary: 'black',
+                secondary: 'rgb(192 132 252)',
+                highlight: 'rgb(239 68 68)',
+                text: 'rgb(30 41 59)',
+            },
+            dark: {
+                primary: '#f3efd3',
+                secondary: '#ffc001',
+                highlight: 'rgb(239 68 68)',
+                text: 'rgb(156 163 175)',
+            },
+        }),
+    ],
 };

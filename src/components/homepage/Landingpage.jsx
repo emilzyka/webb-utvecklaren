@@ -73,8 +73,8 @@ export const Landingpage = () => {
     return (
         <>
             <div className='flex flex-col items-center mt-32'>
-                <h1 className='text-center text-black dark:text-bone text-4xl'>Grunläggande</h1>
-                <h1 className='text-center text-gold text-4xl ml-48 mb-12 '>Verktyg.</h1>
+                <h1 className='text-center text-primary text-4xl'>Grunläggande</h1>
+                <h1 className='text-center text-secondary text-4xl ml-48 mb-12 '>Verktyg.</h1>
             </div>
             <div className='flex flex-row lg:flex-col items-center justify-center gap-2'>
                 {basicTools.map(({ id, name, title, examaples, description }) => (
@@ -83,15 +83,15 @@ export const Landingpage = () => {
                      border-gray-500 bg-bglight bg-opacity-60'
                         key={id}>
                         <h1 className='px-6 py-4 text-xl text-bone text-center'>{name}</h1>
-                        <h2 className='text-lg text-yellow-500 text-center underline underline-offset-8'>{title}</h2>
+                        <h2 className='text-lg text-secondary text-center underline underline-offset-8'>{title}</h2>
                         <p className='px-6 py-4 text-md text-gray-300 text-center'>{description}</p>
                         <p className='px-6 py-4 font-extralight text-md text-gray-300 text-center'>{examaples.join(', ')}</p>
                     </div>
                 ))}
             </div>
             <div className='flex flex-col items-center justify-center mt-28 mb-16'>
-                <h1 className='text-4xl text-black dark:text-bone mt-12'>De viktigaste byggstenarna i</h1>
-                <span className='text-gold text-4xl'>&nbsp;webbutveckling.</span>
+                <h1 className='text-4xl text-primary mt-12'>De viktigaste byggstenarna i</h1>
+                <span className='text-secondary text-4xl'>&nbsp;webbutveckling.</span>
             </div>
             <div className='flex flex-col items-center justify-center'>
                 {info.map(({ id, title, icon, description }) =>
@@ -122,7 +122,7 @@ export const Landingpage = () => {
             <div className='flex flex-col items-center justify-center gap-4'>
                 {tech.map(({ id, title, description }) => (
                     <div className='mt-6 ' key={id}>
-                        <h3 className='text-gold text-2xl p-2'>{title}</h3>
+                        <h3 className='text-secondary text-2xl p-2'>{title}</h3>
                         <p className='text-gray-600 dark:text-gray-300 font-light text-lg p-2 max-w-lg sm:max-w-md text-justify'>
                             {description}
                         </p>
